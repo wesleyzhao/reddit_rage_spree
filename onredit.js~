@@ -1,0 +1,5 @@
+var bg = chrome.extension.getBackgroundPage();
+var links = bg.links
+links.each(function(){
+    chrome.tabs.create({url: this});
+});

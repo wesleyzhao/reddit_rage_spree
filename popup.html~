@@ -1,0 +1,12 @@
+<img src="megusta.png" height="100px"/>
+<script src="jquery-1.6.4.min.js"></script>
+<script>
+  var anchors = $("#siteTable .click a");
+  var links = Array();
+  anchors.each(function(){
+          chrome.tabs.create({url: this.href});
+  });
+  
+            
+  //chrome.tabs.create({url: "http://google.com"});
+</script>

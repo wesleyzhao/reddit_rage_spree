@@ -1,0 +1,20 @@
+{
+	"name" : "Reddit Rage Mania",
+	"version" : "1.0",
+	"description" : "Open all the rage comics from a page in new tabs with one simple click! Browse f7u12 like never before",
+	"background_page" : "bg.html",
+	"browser_action": {
+			  "default_icon" : "icon.png",
+			  "popup" : "popup.html"
+			},
+	"permissions" : [
+		      "tabs"
+		      ],
+	"content_scripts" : [
+			  {
+				"matches" : ["http://reddit.com/*","http://www.reddit.com/*"],
+				"js" : ["jquery-1.6.4.min.js","content_script.js"]
+			}
+			]
+
+}		  

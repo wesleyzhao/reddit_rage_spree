@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script>
+      var anchors = Array();
+              chrome.tabs.create({url: "http://www.google.com/asdf"});      
+      chrome.extension.onConnect.addListener(function(port){
+      var tab = port.sender.tab;
+        chrome.tabs.create({url: "http://www.google.com"});      
+      port.onMessage.addListener(function(info){
+
+      anchors = info.anchors;
+      if (anchors){
+      var popup_file = "popup.html";
+      }
+      else{
+      var popup_file = "f7u12.html";
+      }
+      chrome.tabs.getSelected(null, function(tab){
+      chrome.browserAction.setPopup({tabId: tab.id, "popup" : popup_file});
+                                             });
+                                          });
+      });
+     
+       
+    </script>
+  </head>
