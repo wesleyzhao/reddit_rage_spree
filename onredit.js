@@ -9,9 +9,3 @@ function open_links(){
     });
 }
 open_links();
-for (link in links){
-    chrome.tabs.create({url: this});
-}
-links.each(function(){
-    chrome.tabs.create({url: this});
-});

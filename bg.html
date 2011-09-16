@@ -2,34 +2,5 @@
 <html>
   <head>
     <script src="jquery-1.6.4.min.js"></script>
-    <script>
-      var links = Array();
-      chrome.extension.onConnect.addListener(function(port){
-      var tab = port.sender.tab;
-      //chrome.tabs.create({url: "http://google.com/asdfd"});
-      port.onMessage.addListener(function(info){
-        //chrome.tabs.create({url: info.test_url});
-      links = info.anchors;
-      //chrome.tabs.create({url: links[0]});
-      
-      /*
-      links.each(function(){
-      chrome.tabs.create({url: this});})
-      })
-      */
-
-      if (links){
-      var popup_file = "popup.html";
-      }
-      else{
-      var popup_file = "f7u12.html";
-      }
-      chrome.tabs.getSelected(null, function(tab){
-      chrome.browserAction.setPopup({tabId: tab.id, "popup" : popup_file});
-                                             });//end getSelected
-                                          });//end addListener
-     });//end
-     
-       
-    </script>
+    <script src="bg_script.js"></script>
   </head>
