@@ -1,6 +1,6 @@
 {
 	"name" : "Reddit Rage Spree",
-	"version" : "1.0",
+	"version" : "1.1",
 	"description" : "Open all the rage comics from a page in new tabs with one simple click! Browse f7u12 like never before",
 	"icons" : {
 		  "16" : "icon_16.png",
@@ -8,7 +8,7 @@
 		  "128" : "icon_128.png"
 		  },
 	"background_page" : "bg.html",
-	"browser_action": {
+	"page_action": {
 			  "default_icon" : "icon_16.png",
 			  "default_title" : "Begin Reddit Rage Spree",
 			  "popup" : "f7u12.html"
