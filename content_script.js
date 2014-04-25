@@ -1,4 +1,4 @@
-var anchors = $("#siteTable .even a.title");
+var anchors = $("#siteTable a.title");
 var links = Array();
 anchors.each(function(){
     links.push(this.href);
